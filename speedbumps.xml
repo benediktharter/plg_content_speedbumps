@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2015 AGP O3. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+-->
+<extension type="plugin" version="3.5" group="content" method="upgrade">
+	<name>plg_content_speedbumps</name>
+	<author>AGP/OzonoStudios</author>
+	<creationDate>April 2015</creationDate>
+	<copyright>Copyright (c) 2015 AGPO3. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+		Hijacks the action on external URLs hyperlinks within the article's content and shows a pop up with the links instead.
+	]]>
+	</description>
+
+	<files>
+		<filename plugin="speedbumps">speedbumps.php</filename>
+		<filename>index.html</filename>
+		<filename>css/overlay.css</filename>
+		<filename>js/speedbumps.js</filename>
+		<filename>js/jquery-1.11.1.min.js</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_speedbumps.ini</language>
+		<language tag="en-GB">en-GB.plg_content_speedbumps.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="include_jquery" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					description="PLG_SPEEDBUMPS_JQUERY_DESC"
+					label="PLG_SPEEDBUMPS_JQUERY"
+				>
+					<option value="1">PLG_SPEEDBUMPS_JQUERY_YES</option>
+					<option value="0">PLG_SPEEDBUMPS_JQUERY_NO</option>
+				</field>
+
+				<field name="exclude_social_networks" type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					description="PLG_SPEEDBUMPS_EXCLUDE_SOCIAL_NETWORKS_DESC"
+					label="PLG_SPEEDBUMPS_EXCLUDE_SOCIAL_NETWORKS"
+				>
+					<option value="1">PLG_SPEEDBUMPS_EXCLUDE_SOCIAL_NETWORKS_YES</option>
+					<option value="0">PLG_SPEEDBUMPS_EXCLUDE_SOCIAL_NETWORKS_NO</option>
+				</field>
+
+				<field name="social_networks" type="textarea"
+					default="facebook.com, twitter.com, pinterest.com, instagram.com, plus.google.com, tumblr.com"
+					description="PLG_SPEEDBUMPS_SOCIAL_NETWORKS_DESC"
+					label="PLG_SPEEDBUMPS_SOCIAL_NETWORKS"
+				>
+				</field>
+
+				<field name="exclude_domains" type="textarea"
+					default=""
+					description="PLG_SPEEDBUMPS_EXCLUDE_DOMAINS_DESC"
+					label="PLG_SPEEDBUMPS_EXCLUDE_DOMAINS"
+				>
+				</field>
+
+				<field name="custom_css" type="textarea"
+					default=""
+					description="PLG_SPEEDBUMPS_CUSTOM_CSS_DESC"
+					label="PLG_SPEEDBUMPS_CUSTOM_CSS"
+				>
+				</field>		
+
+				<field name="custom_text" type="textarea"
+					default="You are about to visit [link] which is an external link. Please confirm this action or close this window."
+					description="PLG_SPEEDBUMPS_CUSTOM_TEXT_DESC"
+					label="PLG_SPEEDBUMPS_CUSTOM_TEXT"
+				>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
