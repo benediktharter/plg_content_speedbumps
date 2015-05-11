@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * @copyright	Copyright (c) 2015 AGP O3. All rights reserved.
+ * @copyright	Copyright (c) 2015 OzonoStudios. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 -->
 <extension type="plugin" version="3.5" group="content" method="upgrade">
 	<name>plg_content_speedbumps</name>
-	<author>AGP/OzonoStudios</author>
+	<author>OzonoStudios</author>
 	<creationDate>April 2015</creationDate>
 	<copyright>Copyright (c) 2015 AGPO3. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
@@ -16,7 +16,7 @@
 	<version>1.0.0</version>
 	<description>
 	<![CDATA[
-		Hijacks the action on external URLs hyperlinks within the article's content and shows a pop up with the links instead.
+		Hijacks the action on external URLs hyperlinks within the article's content and shows a modal window with the links instead.
 	]]>
 	</description>
 
